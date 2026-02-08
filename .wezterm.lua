@@ -26,10 +26,10 @@ config.font = wezterm.font_with_fallback({
 config.font_size = 14.0
 config.window_padding = { left = 2, right = 2, top = 2, bottom = 0 }
 
--- macOS native traffic-light buttons work well with integrated decorations.
--- WezTerm draws its own title bar; the standard Close/Minimize/Maximize
--- buttons appear on the left (macOS convention).
+-- Hide native macOS title bar and traffic-light buttons; WezTerm renders
+-- its own Maximize/Close buttons in the bottom tab bar instead.
 config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
+config.integrated_title_buttons = { 'Maximize', 'Close' }
 
 config.window_frame = {
   active_titlebar_bg = '#0c0c0c',
