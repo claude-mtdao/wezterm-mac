@@ -1,0 +1,5 @@
+[nodejs]
+symbol = "NODE "
+detect_extensions = ["js", "mjs", "cjs", "ts", "mts", "cts"]
+detect_files = ["package.json"]
+detect_folders = ["node_modules"]
