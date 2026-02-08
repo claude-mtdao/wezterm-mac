@@ -38,6 +38,29 @@ cp .wezterm.lua ~/.wezterm.lua
   # and install via Font Book
   ```
 
+## Finder Integration
+
+macOS Finder's built-in "New Terminal at Folder" service always opens Terminal.app. To get **"Open WezTerm Here"** in the right-click menu instead:
+
+### Install the Quick Action
+
+```bash
+cp -R automator/Open\ WezTerm\ Here.workflow ~/Library/Services/
+```
+
+Right-click any folder in Finder and look under **Services > Open WezTerm Here**.
+
+### Optional: disable the built-in Terminal service
+
+1. Open **System Settings > Keyboard > Keyboard Shortcuts > Services > Files and Folders**
+2. Uncheck **New Terminal at Folder** and **New Terminal Tab at Folder**
+
+### Optional: assign a keyboard shortcut
+
+In the same **Services** settings pane, click "Open WezTerm Here" and assign a shortcut (e.g., `Ctrl+Cmd+T`).
+
+> If the service doesn't appear immediately, run `/System/Library/CoreServices/pbs -update` or log out and back in.
+
 ## Keybindings
 
 All bindings use the **leader key** `Ctrl+B`, matching the default tmux prefix. Press `Ctrl+B`, release, then press the action key within 1 second.
@@ -126,6 +149,10 @@ Press `Ctrl+B` twice to send a literal `Ctrl+B` to the running program.
 | Key | Action |
 |-----|--------|
 | `F11` (direct) | Toggle fullscreen |
+| `Ctrl+Left` (direct) | Skip word left |
+| `Ctrl+Right` (direct) | Skip word right |
+| `Ctrl+Backspace` (direct) | Delete previous word |
+| `Ctrl+Delete` (direct) | Delete next word |
 | `r` | Reload configuration |
 | `:` | Debug overlay / Lua REPL |
 

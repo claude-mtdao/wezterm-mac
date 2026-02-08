@@ -168,6 +168,17 @@ config.keys = {
   -- the green traffic-light button or Ctrl+Cmd+F.
   { key = 'F11', mods = 'NONE', action = act.ToggleFullScreen },
 
+  -- Word-skipping: Ctrl+Left/Right (matches Linux/Windows terminals)
+  -- NOTE: Disable Mission Control's Ctrl+Arrow shortcuts first:
+  --   System Settings > Keyboard > Keyboard Shortcuts > Mission Control
+  --   Uncheck "Move left a space" and "Move right a space"
+  { key = 'LeftArrow',  mods = 'CTRL', action = act.SendString '\x1bb' },
+  { key = 'RightArrow', mods = 'CTRL', action = act.SendString '\x1bf' },
+  -- Delete previous word: Ctrl+Backspace (sends Ctrl+W / werase)
+  { key = 'Backspace',  mods = 'CTRL', action = act.SendString '\x17' },
+  -- Delete next word: Ctrl+Delete (sends ESC+d / kill-word)
+  { key = 'Delete',     mods = 'CTRL', action = act.SendString '\x1bd' },
+
   -- Pass Ctrl+B through when pressed twice
   { key = 'b', mods = 'LEADER|CTRL', action = act.SendKey { key = 'b', mods = 'CTRL' } },
 

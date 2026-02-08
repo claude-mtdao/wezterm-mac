@@ -37,7 +37,8 @@ The configuration is structured in this order:
 
 ## File Layout
 
-- `.wezterm.lua` — the entire configuration (333 lines)
+- `.wezterm.lua` — the entire configuration (346 lines)
+- `automator/` — macOS Automator Quick Action ("Open WezTerm Here" Finder service)
 - `config-snippets/` — optional standalone snippets (e.g., custom window frame styling)
 - `example-starship.toml` — example Starship prompt config for Node.js detection
 - `README.md` — setup instructions, keybinding reference, cross-platform comparison
