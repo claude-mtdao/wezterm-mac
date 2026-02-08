@@ -194,7 +194,7 @@ eval "$(starship init zsh)"
 |-----|--------|
 | `Ctrl+R` | Fuzzy search command history |
 | `Ctrl+T` | Fuzzy find files |
-| `Alt+C` | Fuzzy cd into subdirectory |
+| `Option+C` | Fuzzy cd into subdirectory |
 
 ### zoxide (smart cd)
 
